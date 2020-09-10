@@ -26,9 +26,9 @@ const IndexPage = () => {
   const [values, setValues] = useState({
     width: 200,
     height: 200,
-    horTopLeft: 50,
+    horTopLeft: 10,
     horTopRight: 50,
-    horBottomRight: 50,
+    horBottomRight: 10,
     horBottomLeft: 50,
     verTopLeft: 50,
     verTopRight: 50,
