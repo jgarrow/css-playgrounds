@@ -9,6 +9,7 @@ const Container = styled.div`
     margin: 0 auto;
     padding: 1rem;
     position: relative;
+    font-size: ${({ values }) => `${values.fontSize}${values.fontUnit}`};
 `
 
 const Result = styled.div`
@@ -27,7 +28,7 @@ const Result = styled.div`
 
 const BorderRadiusResult = ({ values }) => {
     return (
-        <Container>
+        <Container values={values}>
             <Result values={values} />
         </Container>
     )

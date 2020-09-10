@@ -105,10 +105,11 @@ const BorderRadiusPlaygroundInputs = ({ values, handleChange }) => {
             onBlur={handleChange}
             onChange={handleChange}
           >
-            <option value="px">px</option>
             <option value="%">%</option>
-            <option value="em">em</option>
-            <option value="rem">rem</option>
+            <option value="px">px</option>
+            
+            {/* <option value="em">em</option>
+            <option value="rem">rem</option> */}
           </select>
         </label>
   
@@ -131,10 +132,10 @@ const BorderRadiusPlaygroundInputs = ({ values, handleChange }) => {
             onBlur={handleChange}
             onChange={handleChange}
           >
-            <option value="px">px</option>
             <option value="%">%</option>
-            <option value="em">em</option>
-            <option value="rem">rem</option>
+            <option value="px">px</option>
+            {/* <option value="em">em</option>
+            <option value="rem">rem</option> */}
           </select>
         </label>
   
@@ -157,10 +158,10 @@ const BorderRadiusPlaygroundInputs = ({ values, handleChange }) => {
             onBlur={handleChange}
             onChange={handleChange}
           >
-            <option value="px">px</option>
             <option value="%">%</option>
-            <option value="em">em</option>
-            <option value="rem">rem</option>
+            <option value="px">px</option>
+            {/* <option value="em">em</option>
+            <option value="rem">rem</option> */}
           </select>
         </label>
         
@@ -183,10 +184,10 @@ const BorderRadiusPlaygroundInputs = ({ values, handleChange }) => {
             onBlur={handleChange}
             onChange={handleChange}
           >
-            <option value="px">px</option>
             <option value="%">%</option>
-            <option value="em">em</option>
-            <option value="rem">rem</option>
+            <option value="px">px</option>
+            {/* <option value="em">em</option>
+            <option value="rem">rem</option> */}
           </select>
         </label>
       </Container>
@@ -213,10 +214,10 @@ const BorderRadiusPlaygroundInputs = ({ values, handleChange }) => {
             onBlur={handleChange}
             onChange={handleChange}
           >
-            <option value="px">px</option>
             <option value="%">%</option>
-            <option value="em">em</option>
-            <option value="rem">rem</option>
+            <option value="px">px</option>
+            {/* <option value="em">em</option>
+            <option value="rem">rem</option> */}
           </select>
         </label>
   
@@ -239,10 +240,10 @@ const BorderRadiusPlaygroundInputs = ({ values, handleChange }) => {
             onBlur={handleChange}
             onChange={handleChange}
           >
-            <option value="px">px</option>
             <option value="%">%</option>
-            <option value="em">em</option>
-            <option value="rem">rem</option>
+            <option value="px">px</option>
+            {/* <option value="em">em</option>
+            <option value="rem">rem</option> */}
           </select>
         </label>
   
@@ -265,10 +266,10 @@ const BorderRadiusPlaygroundInputs = ({ values, handleChange }) => {
             onBlur={handleChange}
             onChange={handleChange}
           >
-            <option value="px">px</option>
             <option value="%">%</option>
-            <option value="em">em</option>
-            <option value="rem">rem</option>
+            <option value="px">px</option>
+            {/* <option value="em">em</option>
+            <option value="rem">rem</option> */}
           </select>
         </label>
 
@@ -291,10 +292,10 @@ const BorderRadiusPlaygroundInputs = ({ values, handleChange }) => {
             onBlur={handleChange}
             onChange={handleChange}
           >
-            <option value="px">px</option>
             <option value="%">%</option>
-            <option value="em">em</option>
-            <option value="rem">rem</option>
+            <option value="px">px</option>
+            {/* <option value="em">em</option>
+            <option value="rem">rem</option> */}
           </select>
         </label>
       </Container>
@@ -314,7 +315,7 @@ const BorderRadiusPlaygroundInputs = ({ values, handleChange }) => {
           onChange={handleChange}
         />
 
-        <label htmlFor="borderUnit">
+        {/* <label htmlFor="borderUnit">
           <select
             name="borderUnit"
             id="borderUnit"
@@ -326,7 +327,7 @@ const BorderRadiusPlaygroundInputs = ({ values, handleChange }) => {
             <option value="em">em</option>
             <option value="rem">rem</option>
           </select>
-        </label>
+        </label> */}
       </Container>
     </Form>
   )
