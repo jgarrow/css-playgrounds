@@ -1,18 +1,22 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import styled from "styled-components"
 
 const Container = styled.div`
     box-sizing: border-box;
-    width: 80%;
+    width: 100%;
     max-width: 960px;
-    height: 50vh;
+    height: 100%;
     margin: 0 auto;
     padding: 1rem;
-    background-color: papayawhip;
-    border: 2px solid rebeccapurple;
+    
+    position: relative;
 `
 
 const Result = styled.div`
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: darkseagreen;
     margin: 0 auto;
     width: ${({ values }) => `${values.width}${values.widthUnit}`};
@@ -21,26 +25,12 @@ const Result = styled.div`
 `
 
 const BorderRadiusResult = ({ values }) => {
-    console.log('values in result: ', values)
-    const [result, setResult] = useState(`${values.horTopLeft}${values.horTopLeftUnit} ${values.horTopRight}${values.horTopRightUnit} ${values.horBottomRight}${values.horBottomRightUnit} ${values.horBottomLeft}${values.horBottomLeftUnit} / ${values.verTopLeft}${values.verTopLeftUnit} ${values.verTopRight}${values.verTopRightUnit} ${values.verBottomRight}${values.verBottomRightUnit} ${values.verBottomLeft}${values.verBottomLeftUnit}`)
-
-    useEffect(() => {
-        setResult(`${values.horTopLeft}${values.horTopLeftUnit} ${values.horTopRight}${values.horTopRightUnit} ${values.horBottomRight}${values.horBottomRightUnit} ${values.horBottomLeft}${values.horBottomLeftUnit} / ${values.verTopLeft}${values.verTopLeftUnit} ${values.verTopRight}${values.verTopRightUnit} ${values.verBottomRight}${values.verBottomRightUnit} ${values.verBottomLeft}${values.verBottomLeftUnit}`)
-    }, [values])
-
     return (
-        <>
-            <Container>
-                <Result 
-                    values={values}
-                />
-            </Container>
-            <pre>
-                <code>
-                    border-radius: {result}
-                </code>
-            </pre>
-        </>
+        <Container>
+            <Result 
+                values={values}
+            />
+        </Container>
     )
 }
 

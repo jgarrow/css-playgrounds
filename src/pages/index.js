@@ -1,10 +1,26 @@
 import React, { useState } from "react"
+import styled from "styled-components"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BorderRadiusPlaygroundInputs from "../components/borderRadiusInputs"
 import BorderRadiusResult from "../components/borderRadiusResult"
+import BorderRadiusCodeSnippet from "../components/borderRadiusCodeSnippet"
 
+const Title = styled.h1`
+  text-align: center;
+`
+
+const Container = styled.div`
+  display: grid;
+  grid-template-columns: minmax(500px, 960px) minmax(290px, 350px);
+  grid-template-rows: 1fr 80px;
+  grid-gap: 15px;
+  width: 100%;
+  max-width: 1325px;
+  height: calc(100% - (45px + 1.45rem));
+  margin: 0 auto;
+`
 
 const IndexPage = () => {
   const [values, setValues] = useState({
@@ -40,16 +56,20 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <h1>Border Radius Playground</h1>
+      <Title>Border Radius Playground</Title>
 
-      <BorderRadiusResult 
-        values={values} 
-      />
+      <Container>
+        <BorderRadiusResult 
+          values={values} 
+        />
+  
+        <BorderRadiusPlaygroundInputs 
+          values={values} 
+          handleChange={handleChange} 
+        />
 
-      <BorderRadiusPlaygroundInputs 
-        values={values} 
-        handleChange={handleChange} 
-      />
+        <BorderRadiusCodeSnippet values={values} />
+      </Container>
     </Layout>
   )
 }
