@@ -1,22 +1,57 @@
-import React from "react"
-import { Link } from "gatsby"
+import React, { useState } from "react"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import BorderRadiusPlaygroundInputs from "../components/borderRadiusInputs"
+import BorderRadiusResult from "../components/borderRadiusResult"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
-)
+
+const IndexPage = () => {
+  const [values, setValues] = useState({
+    width: 200,
+    height: 200,
+    horTopLeft: 50,
+    horTopRight: 50,
+    horBottomRight: 50,
+    horBottomLeft: 50,
+    verTopLeft: 50,
+    verTopRight: 50,
+    verBottomRight: 50,
+    verBottomLeft: 50,
+    widthUnit: "px",
+    heightUnit: "px",
+    horTopLeftUnit: "%",
+    horTopRightUnit: "%",
+    horBottomRightUnit: "%",
+    horBottomLeftUnit: "%",
+    verTopLeftUnit: "%",
+    verTopRightUnit: "%",
+    verBottomRightUnit: "%",
+    verBottomLeftUnit: "%"
+  })
+
+  const handleChange = e => {
+    setValues({
+      ...values,
+      [e.target.name]: e.target.value
+    })
+  }
+  
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <h1>Border Radius Playground</h1>
+
+      <BorderRadiusResult 
+        values={values} 
+      />
+
+      <BorderRadiusPlaygroundInputs 
+        values={values} 
+        handleChange={handleChange} 
+      />
+    </Layout>
+  )
+}
 
 export default IndexPage
