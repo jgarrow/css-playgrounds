@@ -19,8 +19,7 @@ const Footer = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  bottom: 0;
+  
 
   p {
     margin: 0;
@@ -47,11 +46,7 @@ const Layout = ({ children }) => {
           padding: `0 1.0875rem 1.45rem`,
         }}
       >
-        <main
-          style={{
-            height: `calc(100vh - (150px + 1.45rem + 1.0875rem))` // 150px = header + footer, 1.45rem = header margin bottom, 1.0875rem = main padding bottom
-          }}
-        >{children}</main>
+        <main>{children}</main>
         
       </div>
       <Footer>

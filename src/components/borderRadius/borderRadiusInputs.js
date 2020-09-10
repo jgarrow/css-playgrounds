@@ -7,6 +7,7 @@ const Form = styled.form`
   grid-template-columns: 1fr;
   grid-gap: 15px;
   width: 100%;
+  max-height: 610px;
   box-sizing: border-box;
   padding: 1rem;
   border-radius: 5px;
@@ -15,6 +16,7 @@ const Form = styled.form`
   font-size: 1rem;
   margin-bottom: 0;
   overflow-y: scroll;
+  transition: height 0.25s ease-in-out;
 
   h3 {
     margin: 0;
@@ -49,8 +51,10 @@ const Label = styled.label`
 const BorderRadiusPlaygroundInputs = ({ values, handleChange }) => {
 
   return (
-    <Form>
-      <Container>
+    <Form withBorder={values.withBorder}>
+      <Container style={{
+        gridTemplateColumns: `115px minmax(100px, 1fr)`
+      }}>
 
         {/* Width */}
         <Label htmlFor="width">Width:</Label>
@@ -58,25 +62,12 @@ const BorderRadiusPlaygroundInputs = ({ values, handleChange }) => {
           type="number"
           id="width"
           name="width"
+          min={1}
+          max={960}
           value={values.width}
           onBlur={handleChange}
           onChange={handleChange}
         />
-  
-        <label htmlFor="widthUnit">
-          <select
-            name="widthUnit"
-            id="widthUnit"
-            value={values.widthUnit}
-            onBlur={handleChange}
-            onChange={handleChange}
-          >
-            <option value="px">px</option>
-            <option value="%">%</option>
-            <option value="em">em</option>
-            <option value="rem">rem</option>
-          </select>
-        </label>
   
         {/* Height */}
         <Label htmlFor="height">Height:</Label>
@@ -84,25 +75,12 @@ const BorderRadiusPlaygroundInputs = ({ values, handleChange }) => {
           type="number"
           id="height"
           name="height"
+          min={1}
+          max={435}
           value={values.height}
           onBlur={handleChange}
           onChange={handleChange}
         />
-  
-        <label htmlFor="heightUnit">
-          <select
-            name="heightUnit"
-            id="heightUnit"
-            value={values.heightUnit}
-            onBlur={handleChange}
-            onChange={handleChange}
-          >
-            <option value="px">px</option>
-            <option value="%">%</option>
-            <option value="em">em</option>
-            <option value="rem">rem</option>
-          </select>
-        </label>
       </Container>
 
       <h3>Horizontal Border Radius</h3>
@@ -214,10 +192,7 @@ const BorderRadiusPlaygroundInputs = ({ values, handleChange }) => {
       </Container>
 
       <h3>Vertical Border Radius</h3>
-      <Container style={{
-        borderBottom: `none`,
-        paddingBottom: `0`
-      }}>
+      <Container>
 
         {/* Top Left */}
         <Label htmlFor="verTopLeft">Top Left:</Label>
@@ -318,6 +293,36 @@ const BorderRadiusPlaygroundInputs = ({ values, handleChange }) => {
           >
             <option value="px">px</option>
             <option value="%">%</option>
+            <option value="em">em</option>
+            <option value="rem">rem</option>
+          </select>
+        </label>
+      </Container>
+        
+      <h3>Border</h3>
+      <Container style={{
+        borderBottom: `none`,
+      }}>
+        <label htmlFor="borderWidth">Width:</label>
+        <input
+          type="number"
+          id="borderWidth"
+          name="borderWidth"
+          min={0}
+          value={values.borderWidth}
+          onBlur={handleChange}
+          onChange={handleChange}
+        />
+
+        <label htmlFor="borderUnit">
+          <select
+            name="borderUnit"
+            id="borderUnit"
+            value={values.borderUnit}
+            onBlur={handleChange}
+            onChange={handleChange}
+          >
+            <option value="px">px</option>
             <option value="em">em</option>
             <option value="rem">rem</option>
           </select>
