@@ -20,6 +20,7 @@ const Container = styled.div`
 const Nav = styled.nav`
   width: 40%;
   max-width: 400px;
+  font-size: 1.15rem;
 
   ul {
     width: 100%;

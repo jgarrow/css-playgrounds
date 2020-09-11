@@ -24,6 +24,11 @@ const Footer = styled.footer`
   p {
     margin: 0;
   }
+
+  a {
+    text-decoration: none;
+    color: #424C56;
+  }
 `
 
 const Layout = ({ children }) => {
@@ -51,9 +56,9 @@ const Layout = ({ children }) => {
       </div>
       <Footer>
           <p>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
+            {/* © {new Date().getFullYear()},
+            {` `} */}
+            <a href="https://janessagarrow.com/">Made with <span role="img" aria-label="green heart">💚</span></a>
           </p>
         </Footer>
     </>
