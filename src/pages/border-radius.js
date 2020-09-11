@@ -7,7 +7,7 @@ import BorderRadiusPlaygroundInputs from "../components/borderRadius/borderRadiu
 import BorderRadiusResult from "../components/borderRadius/borderRadiusResult"
 import BorderRadiusCodeSnippet from "../components/borderRadius/borderRadiusCodeSnippet"
 
-const Title = styled.h1`
+const Title = styled.h2`
   text-align: center;
 `
 
@@ -74,7 +74,7 @@ const IndexPage = () => {
   
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Border Radius" />
       <Title>Border Radius Playground</Title>
 
       <Container>
