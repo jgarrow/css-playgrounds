@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `CSS Playgrounds`,
-    description: `Playgrounds for various CSS properties, like border-radius`,
+    description: `Playgrounds for various CSS properties, like border-radius and linear-gradient`,
     author: `Janessa Garrow`,
   },
   plugins: [
